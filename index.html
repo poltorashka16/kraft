@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru" class="wrapper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <script src="app.js" defer></script>
+  <title>Калькулятор РРЦ</title>
+</head>
+<body>
+  <img src="..\krafter.svg" alt="logo" class="log">
+</body>
+
+  <h2 id="rrc">Калькулятор РРЦ</h2>
+<div id="calculator-links">
+  <a href="https://poltorashka16.github.io/OPT.github.io/" id="opt">Калькулятор Индия - ОПТ</a> и <a href="https://poltorashka16.github.io/Cl.Rus.github.io/" id="rus">Калькулятор Россия</a>
+</div>
+
+
+<table id="productTable6" class="pricing-table">
+  <thead>
+      <tr>
+          <th>Детали</th>
+          <th>Длина детали мм</th>
+          <th>Ширина детали мм</th>
+          <th>Количество шт</th>
+          <th>Периметр п.м.</th>
+          <th>Площадь м2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Деталь тип 1</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 2</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 3</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 4</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 5</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 6</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 7</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 8</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 9</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 10</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 11</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 12</td> 
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+      <tr>
+        <td>Деталь тип 13</td>
+        <td><input type="number" class="length" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="width" oninput="calculate()"><hr class="input-underline"></td>
+        <td><input type="number" class="quantity" oninput="calculate()"><hr class="input-underline"></td>
+        <td class="perimeter"></td>
+        <td class="area"></td>
+      </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+        <td><strong>Итог</strong></td>
+        <td class="total-length"></td>
+        <td class="total-width"></td>
+        <td class="total-quantity"></td>
+        <td class="total-perimeter"></td>
+        <td class="total-area"></td>
+    </tr>
+</tfoot>
+</table>
+<script src="app.js"></script>
+</body>
+</html>
+
+<table id="weightCalculationTable" class="pricing-table" >
+    <thead>
+        <tr>
+            <th>Толщина HPL compact мм</th>
+            <th>Вес всех указанных деталей кг</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><input type="number" class="thickness" oninput="calculateWeight()"></td>
+          <td class="total-weight"></td>
+        </tr>
+    </tbody>
+  </table>
+
+  <table id="kitchenCountertopsTable" class="pricing-table">
+    <thead>
+      <tr>
+        <th>Цвет и крафт (срез)</th>
+        <th>Габариты</th>
+        <th>Количество шт</th>
+        <th>Цена за ед.</th>
+        <th>Стоимость</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">Однотонные (белый холодный). Черный крафт. Толщина 12мм</td>
+        <td>3670 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(0)"><hr class="input-underline"></td>
+        <td>24515</td>
+        <td id="price0">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (белый холодный). Черный крафт. Толщина 12мм</td>
+        <td>3670 х 910мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(1)"><hr class="input-underline"></td>
+        <td>36022</td>
+        <td id="price1">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (белый холодный). Черный крафт. Толщина 12мм</td>
+        <td>3670 х 1200мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(2)"><hr class="input-underline"></td>
+        <td>47530</td>
+        <td id="price2">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (белый холодный). Черный крафт. Толщина 12мм</td> 
+        <td>3670 х 1840мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(3)"><hr class="input-underline"></td>
+        <td>69045</td>
+        <td id="price3">0</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="4">Однотонные (цветные). Черный крафт.</td>
+        <td>3670 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(4)"><hr class="input-underline"></td>
+        <td>27316</td>
+        <td id="price4">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (цветные). Черный крафт.</td>
+        <td>3670 х 910мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(5)"><hr class="input-underline"></td>
+        <td>40225</td>
+        <td id="price5">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (цветные). Черный крафт.</td>
+        <td>3670 х 1200мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(6)"><hr class="input-underline"></td>
+        <td>53133</td>
+        <td id="price6">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Однотонные (цветные). Черный крафт.</td>
+        <td>3670 х 1840мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(7)"><hr class="input-underline"></td>
+        <td>77450</td>
+        <td id="price7">0</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="6">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3670 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(8)"><hr class="input-underline"></td>
+        <td>29083</td>
+        <td id="price8">0</td>
+      </tr>
+      <tr>
+        <td rowspan="6" class="hidden">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3670 х 910мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(9)"><hr class="input-underline"></td>
+        <td>42875</td>
+        <td id="price9">0</td>
+      </tr>
+      <tr>
+        <td rowspan="6" class="hidden">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3670 х 1200мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(10)"><hr class="input-underline"></td>
+        <td>56666</td>
+        <td id="price10">0</td>
+      </tr>
+      <tr>
+        <td rowspan="6" class="hidden">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3670 х 1840мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(11)"><hr class="input-underline"></td>
+        <td>82750</td>
+        <td id="price11">0</td>
+      </tr>
+      <tr>
+        <td rowspan="6" class="hidden">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3050 х 645мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(12)"><hr class="input-underline"></td>
+        <td>25779</td>
+        <td id="price12">0</td>
+      </tr>
+      <tr>
+        <td rowspan="6" class="hidden">Фактурные (каменные, древесные и прочие). Черный крафт.</td>
+        <td>3050 х 1300мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(13)"><hr class="input-underline"></td>
+        <td>48559</td>
+        <td id="price13">0</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="4">Фактурные (каменные, древесные и прочие). Белый крафт.</td>
+        <td>3670 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(14)"><hr class="input-underline"></td>
+        <td>47683</td>
+        <td id="price14">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Фактурные (каменные, древесные и прочие). Белый крафт.</td>
+        <td>3670 х 910мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(15)"><hr class="input-underline"></td>
+        <td>70775</td>
+        <td id="price15">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Фактурные (каменные, древесные и прочие). Белый крафт.</td>
+        <td>3670 х 1200мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(16)"><hr class="input-underline"></td>
+        <td>93866</td>
+        <td id="price16">0</td>
+      </tr>
+      <tr>
+        <td rowspan="4" class="hidden">Фактурные (каменные, древесные и прочие). Белый крафт.</td>
+        <td>3670 х 1840мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(17)"><hr class="input-underline"></td>
+        <td>138550</td>
+        <td id="price17">0</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="2">Antifingerprint (Soft Touch). Черный крафт.</td>
+        <td>3050 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(18)"><hr class="input-underline"></td>
+        <td>55560</td>
+        <td id="price18">0</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="hidden">Antifingerprint (Soft Touch). Черный крафт.</td>
+        <td>3050 х 1300мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(19)"><hr class="input-underline"></td>
+        <td>108120</td>
+        <td id="price19">0</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <td rowspan="2">Antifingerprint (Soft Touch). Цветной крафт.</td>
+        <td>3050 х 600мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(20)"><hr class="input-underline"></td>
+        <td>66775</td>
+        <td id="price20">0</td>
+      </tr>
+      <tr>
+        <td rowspan="2" class="hidden">Antifingerprint (Soft Touch). Цветной крафт.</td>
+        <td>3050 х 1300мм</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice7(21)"><hr class="input-underline"></td>
+        <td>130550</td>
+        <td id="price21">0</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" id="totalCost7">Итого стоимость материала столешниц РОЗНИЦА: </td>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <table id="productTable" class="pricing-table">
+    <thead>
+        <tr>
+          <th>Наименование услуги</th>
+          <th>Ед.Изм.</th>
+          <th>Количество</th>
+          <th>Цена за ед.</th>
+          <th>Стоимость</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Прямолинейный черновой раскрой (дополнительно)</td>
+          <td>м.п.</td>
+          <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(0)"><hr class="input-underline"></td>
+          <td>280</td>
+          <td id="price0">0</td>
+        </tr>
+        <tr>
+          <td>Обработка по периметру деталей - фаска R1/R2, шлифовка</td>
+          <td>м.п.</td>
+          <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(1)"><hr class="input-underline"></td>
+          <td>490</td>
+          <td id="price1">0</td>
+        </tr>
+        <tr>
+            <td>Обработка деталей - фаска R3</td>
+            <td>м.п.</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(2)"><hr class="input-underline"></td>
+            <td>550</td>
+            <td id="price2">0</td>
+        </tr>
+        <tr>
+            <td>Обработка деталей - фаска R6-R8</td>
+            <td>м.п.</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(3)"><hr class="input-underline"></td>
+            <td>640</td>
+            <td id="price3">0</td>
+        </tr>
+        <tr>
+            <td>Обработка деталей - фаска 45</td>
+            <td>м.п.</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(4)"><hr class="input-underline"></td>
+            <td>660</td>
+            <td id="price4">0</td>
+        </tr>
+        <tr>
+            <td>Изготовление плинтуса 50мм в цвет</td>
+            <td>м.п.</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(5)"><hr class="input-underline"></td>
+            <td>2600</td>
+            <td id="price5">0</td>
+        </tr>
+        <tr>
+            <td>Прямой стык / K-TOP (стяжки в комплкете)</td>
+            <td>шт</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(6)"><hr class="input-underline"></td>
+            <td>3900</td>
+            <td id="price6">0</td>
+        </tr>
+        <tr>
+          <td>Еврозапил (стяжки в комплекте)</td>
+          <td>шт</td>
+          <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(7)"><hr class="input-underline"></td>
+          <td>4900</td>
+          <td id="price7">0</td>
+      </tr>
+      <tr>
+        <td>Вырез под мойку / варочную поверхность (накладную)</td>
+        <td>шт</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(8)"><hr class="input-underline"></td>
+        <td>3600</td>
+        <td id="price8">0</td>
+    </tr>
+    <tr>
+      <td>Прямой стык / K-TOP (стяжки в комплкете)</td>
+      <td>шт</td>
+      <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(9)"><hr class="input-underline"></td>
+      <td>3900</td>
+      <td id="price9">0</td>
+  </tr>
+  <tr>
+    <td>Вырез под мойку (подстольного монтажа)</td>
+    <td>шт</td>
+    <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(10)"><hr class="input-underline"></td>
+    <td>4600</td>
+    <td id="price10">0</td>
+</tr>
+<tr>
+  <td>Подклейка мойки подстольного монтажа (только нержавейка)</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(11)"><hr class="input-underline"></td>
+  <td>5500</td>
+  <td id="price11">0</td>
+</tr>
+<tr>
+  <td>Вырез под смеситель, дозатор, кнопку</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(12)"><hr class="input-underline"></td>
+  <td>950</td>
+  <td id="price12">0</td>
+</tr>
+<tr>
+  <td>Барное соединение</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(13)"><hr class="input-underline"></td>
+  <td>4900</td>
+  <td id="price13">0</td>
+</tr>
+<tr>
+  <td>Фигурный вырез ЧПУ</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(14)"><hr class="input-underline"></td>
+  <td>3000</td>
+  <td id="price614">0</td>
+</tr>
+<tr>
+  <td>Дополнительный вырез по месту</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(15)"><hr class="input-underline"></td>
+  <td>1600</td>
+  <td id="price15">0</td>
+</tr>
+<tr>
+  <td>Радиусный угол R6</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(16)"><hr class="input-underline"></td>
+  <td>300</td>
+  <td id="price16">0</td>
+</tr>
+<tr>
+  <td>Радиусный угол до R20</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(17)"><hr class="input-underline"></td>
+  <td>450</td>
+  <td id="price17">0</td>
+</tr>
+<tr>
+  <td>Радиусный угол до R40</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(18)"><hr class="input-underline"></td>
+  <td>650</td>
+  <td id="price18">0</td>
+</tr>
+<tr>
+  <td>Установка футорки м4-м6</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(19)"><hr class="input-underline"></td>
+  <td>85</td>
+  <td id="price19">0</td>
+</tr>
+<tr>
+  <td>Гравировка, нанесение изображений, надписей (по запросу)</td>
+  <td>см2</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice(20)"><hr class="input-underline"></td>
+  <td>40</td>
+  <td id="price20">0</td>
+</tr>
+    </tbody>
+    <tfoot>
+        <tr>
+          <td colspan="5" id="totalCost">Итого обработка РОЗНИЦА:</td>
+        </tr>
+      </tfoot>
+  </table>
+
+  <div class="table-spacing"></div>
+
+  <table id="productTable2" class="pricing-table">
+    <thead>
+        <tr>
+            <th>Наименование услуги</th>
+            <th>Ед.изм.</th>
+            <th>Количество</th>
+            <th>Цена за ед.</th>
+            <th>Стоимость</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Упаковка в стрейч пленку деталей</td>
+            <td>м2</td>
+            <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(0)"><hr class="input-underline"></td>
+            <td>350</td>
+            <td id="price0">0</td>
+        </tr>
+        <tr>
+          <td>Упаковка в картон / пузырчатую пленку деталей </td>
+          <td>м2</td>
+          <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(1)"><hr class="input-underline"></td>
+          <td>450</td>
+          <td id="price1">0</td>
+      </tr>
+      <tr>
+        <td>Жесткая упаковка для столешниц с вырезами</td>
+        <td>м2</td>
+        <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(2)"><hr class="input-underline"></td>
+        <td>1000</td>
+        <td id="price2">0</td>
+    </tr>
+    <tr>
+      <td>Жесткая упаковка в транспортный короб</td>
+      <td>м2</td>
+      <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(3)"><hr class="input-underline"></td>
+      <td>1500</td>
+      <td id="price3">0</td>
+  </tr>
+  <tr>
+    <td>Доставка в пределах МКАД до 1 тонны</td>
+    <td>шт</td>
+    <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(4)"><hr class="input-underline"></td>
+    <td>5000</td>
+    <td id="price4">0</td>
+</tr>
+<tr>
+  <td>Доставка 15км от МКАД до 1 тонны</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(5)"><hr class="input-underline"></td>
+  <td>10000</td>
+  <td id="price5">0</td>
+</tr>
+<tr>
+  <td>Доставка 50км от МКАД до 1 тонны</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(6)"><hr class="input-underline"></td>
+  <td>18000</td>
+  <td id="price6">0</td>
+</tr>
+<tr>
+  <td>Транспортный палет до 4300</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(7)"><hr class="input-underline"></td>
+  <td>9800</td>
+  <td id="price7">0</td>
+</tr>
+<tr>
+  <td>Транспортный палет до 3670</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(8)"><hr class="input-underline"></td>
+  <td>9000</td>
+  <td id="price8">0</td>
+</tr>
+<tr>
+  <td>Транспортный палет до 3050</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(9)"><hr class="input-underline"></td>
+  <td>4700</td>
+  <td id="price9">0</td>
+</tr>
+<tr>
+  <td>Доставка в другой город или регион (считается отдельно)</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(10)"><hr class="input-underline"></td>
+  <td>0</td>
+  <td id="price10">0</td>
+</tr>
+<tr>
+  <td>Доставка свыше 1 тонны (считается отдельно)</td>
+  <td>шт</td>
+  <td class="input-column"><input type="number" min="0" value="" oninput="calculatePrice2(11)"><hr class="input-underline"></td>
+  <td>0</td>
+  <td id="price11">0</td>
+</tr>
+    </tbody>
+    <tfoot>
+        <tr>
+          <td colspan="5" id="totalCost2">Итого траснпортные услуги и упаковка РОЗНИЦА: </td>
+        </tr>
+      </tfoot>
+  </table>
+
+  <div class="table-spacing"></div>
+
+ 
+  <table id="productTable5" class="pricing-table">
+    <thead>
+      <tr>
+        <th colspan="5" id="overallTotal">Общая стоимость: 0</th>
+      </tr>
+    </thead>
+  </table>
+  
+  <button id="calculateButton" onclick="updateOverallTotal()">Расчет</button>
+
+
+  <div id="myModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalData"></div>
+    </div>
+  </div>
+
+  <img src="../sssaaa.png" alt="aass"  class="img">
+
+</body>
+</html>
