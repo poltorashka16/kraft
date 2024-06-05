@@ -12,16 +12,16 @@ function calculate() {
     let quantity = parseFloat(row.querySelector(".quantity").value) || 0;
 
     if (length > 0 && width > 0 && quantity > 0) {
-      // Calculate the perimeter in millimeters, then convert to meters
+      
       let perimeter = 2 * (length + width) * quantity / 1000;
-      // Calculate the area in square meters
+     
       let area = (length * width * quantity) / 1000000;
 
-      // Update the row with the calculated perimeter and area
+     
       row.querySelector(".perimeter").innerText = perimeter.toFixed(2);
       row.querySelector(".area").innerText = area.toFixed(2);
 
-      // Add the current row's perimeter and area to the totals
+
       totalPerimeter += perimeter;
       totalArea += area;
 
@@ -29,13 +29,13 @@ function calculate() {
       totalWidth += width;
       totalQuantity += quantity;
     }
-    document.querySelector(".total-length").innerText = (totalLength / 1000).toFixed(2); // Делим на 1000 для перевода из мм в м
-    document.querySelector(".total-width").innerText = (totalWidth / 1000).toFixed(2); // Делим на 1000 для перевода из мм в м
+    document.querySelector(".total-length").innerText = (totalLength / 1000).toFixed(2); 
+    document.querySelector(".total-width").innerText = (totalWidth / 1000).toFixed(2);
     document.querySelector(".total-quantity").innerText = totalQuantity;
   
   });
 
-  // Update the total perimeter and area in the footer
+ 
   document.querySelector(".total-perimeter").innerText = totalPerimeter.toFixed(2);
   document.querySelector(".total-area").innerText = totalArea.toFixed(2);
 }
@@ -47,13 +47,13 @@ function calculateWeight() {
   rows.forEach(row => {
       let thickness = parseFloat(row.querySelector(".thickness").value) || 0;
 
-      // Рассчитываем вес по формуле: площадь * 1.45 * Толщина HPL
+      
       let weight = totalArea * 1.45 * thickness;
 
-      // Округляем вес до трех знаков после запятой
+     
       weight = Math.round(weight * 1000) / 1000;
 
-      // Выводим результат во второй столбец
+     
       row.querySelector(".total-weight").innerText = weight;
   });
 }
@@ -153,14 +153,14 @@ function updateOverallTotal() {
 var modal = document.getElementById("myModal");
 var modalData = document.getElementById("modalData");
 
-// Получаем ссылку на кнопку, которая закрывает модальное окно
+
 var closeButton = document.getElementsByClassName("close")[0];
 
-// Функция для открытия модального окна и передачи данных
+
 function openModal(data) {
-  // Вставляем данные в контейнер
+
   modalData.innerHTML = data;
-  // Отображаем модальное окно
+
   modal.style.display = "block";
 }
 
@@ -169,12 +169,12 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Закрытие модального окна при клике на кнопку закрытия
+
 closeButton.onclick = function() {
   closeModal();
 };
 
-// Закрытие модального окна при клике вне модального окна
+
 window.onclick = function(event) {
   if (event.target == modal) {
     closeModal();
@@ -182,9 +182,9 @@ window.onclick = function(event) {
 };
 
 function openModal(overallTotal) {
-  // Вставляем данные в контейнер
+
   modalData.innerHTML = 'Общая стоимость: ' + overallTotal.toLocaleString();
-  // Отображаем модальное окно
+
   modal.style.display = "block";
 }
 
@@ -193,9 +193,9 @@ function calculateTotal() {
   button.style.backgroundColor = '#ffd700';
   button.style.color = '#000';
 
-  var data = "Общая стоимость: $100"; // Замените на данные, полученные в результате расчета
+  var data = "Общая стоимость: $100";
   
-  // Открываем модальное окно и передаем в него данные
+
   openModal(data);
 }
 
