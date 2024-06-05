@@ -1,137 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-/* Стили для таблиц с ценами */
+
 body {
-  background-color: #000; /* Черный цвет фона страницы */
-  color: white; /* Белый цвет текста */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  background-color: #000; 
+  color: white; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .pricing-table {
-  width: 80%; /* Уменьшаем ширину таблицы */
-  margin: 20px auto; /* Центрируем таблицу по горизонтали и добавляем немного отступа сверху и снизу */
+  width: 80%; 
+  margin: 20px auto; 
   border-collapse: collapse;
-  border-radius: 10px; /* Задаем округление углов */
-  overflow: hidden; /* Обрезаем содержимое таблицы, если оно выходит за границы округленных углов */
+  border-radius: 10px; 
+  overflow: hidden; 
 }
 
 .pricing-table th, .pricing-table td {
-  padding: 10px; /* Увеличиваем внутренний отступ ячеек */
+  padding: 10px; 
   text-align: center;
 }
 
 .pricing-table th {
-  background-color: #000; /* Черный цвет для заголовков */
-  color: white; /* Белый цвет текста в заголовках */
+  background-color: #000; 
+  color: white; 
 }
 
 .pricing-table tfoot tr {
-  background-color: #000; /* Черный цвет для нижнего колонтитула */
+  background-color: #000; 
 }
 
 .pricing-table tfoot td {
   padding: 10px;
-  text-align: center; /* Центрируем текст в итоговых ячейках */
-  font-weight: bold; /* Делаем текст жирным */
-  font-size: 18px; /* Увеличиваем размер текста */
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 18px; 
 }
 
 #calculateButton {
   display: block;
-  font-weight: bold; /* Жирный шрифт */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
-  margin: 20px auto; /* Располагаем по центру */
-  padding: 15px 30px; /* Увеличиваем внутренний отступ */
-  font-size: 18px; /* Увеличиваем размер шрифта */
-  background-color: #ff9f00; /* Оранжевый цвет кнопки */
-  color: #000000; /* Черный цвет текста */
+  font-weight: bold; 
+  font-family: 'Montserrat', sans-serif; 
+  margin: 20px auto; 
+  padding: 15px 30px; 
+  font-size: 18px; 
+  background-color: #ff9f00; 
+  color: #000000; 
   border: none;
-  border-radius: 20px; /* Задаем округление углов */
+  border-radius: 20px; 
   cursor: pointer;
   outline: none;
-  transition: box-shadow 0.5s ease; /* Медленное появление эффекта свечения */
+  transition: box-shadow 0.5s ease; 
 }
 
 #calculateButton:hover {
-  box-shadow: 0 0 20px 5px rgba(255, 159, 0, 0.5); /* Светящийся эффект свечения */
+  box-shadow: 0 0 20px 5px rgba(255, 159, 0, 0.5); 
 }
 
 input[type="number"] {
-  width: calc(100% - 10px); /* Ширина поля ввода с учетом отступов */
-  height: 40px; /* Высота поля ввода */
-  font-size: 16px; /* Размер шрифта */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
-  color: white; /* Белый цвет текста */
-  padding: 0 5px; /* Внутренний отступ */
-  background: transparent; /* Прозрачный фон */
-  border: none; /* Убираем границы */
-  outline: none; /* Убираем контур фокуса */
-  position: relative; /* Позиционируем относительно */
+  width: calc(100% - 10px); 
+  height: 40px; 
+  font-size: 16px; 
+  font-family: 'Montserrat', sans-serif; 
+  color: white; 
+  padding: 0 5px; 
+  background: transparent; 
+  border: none; 
+  outline: none; 
+  position: relative; 
 }
 
 input[type="number"]::placeholder {
-  color: white; /* Белый цвет плейсхолдера */
+  color: white; 
 }
 
 input[type="number"]::-webkit-inner-spin-button, 
 input[type="number"]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; /* Убираем стандартные кнопки вращения */
-  margin: 0; /* Убираем отступы */
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 hr.input-underline {
   border: none;
-  border-top: 1px solid white; /* Устанавливаем белую линию сверху */
-  margin: 0; /* Убираем отступы */
+  border-top: 1px solid white; 
+  margin: 0; 
 }
 
 .input-column {
-  width: 10%; /* Пример уменьшения ширины столбца до 10% */
+  width: 10%; 
 }
 
 #overallTotal {
-  text-align: center; /* Выравниваем по центру */
-  font-weight: bold; /* Делаем текст жирным */
-  font-size: 22px; /* Увеличиваем размер текста для общей стоимости */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 22px; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
 .pricing-table:hover {
-  box-shadow: 0 0 20px 5px rgb(251, 184, 13); /* Тень с желтым цветом */
-  transition: box-shadow 0.8s ease; /* Увеличиваем время анимации */
+  box-shadow: 0 0 20px 5px rgb(251, 184, 13); 
+  transition: box-shadow 0.8s ease; 
 }
 
 #rrc {
-  text-align: center; /* Центрируем текст заголовка */
-  margin-top: 20px; /* Добавляем отступ сверху */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  text-align: center; 
+  margin-top: 20px; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
 #calculator-links {
-  text-align: center; /* Центрируем ссылки */
-  font-size: 14px; /* Уменьшаем размер шрифта */
-  margin-top: 10px; /* Добавляем отступ сверху */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  text-align: center; 
+  font-size: 14px; 
+  margin-top: 10px; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 #calculator-links a {
-  color: white; /* Белый цвет текста ссылок */
-  text-decoration: none; /* Убираем подчеркивание */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  color: white; 
+  text-decoration: none; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
 #calculator-links a:hover {
-  text-decoration: underline; /* Добавляем подчеркивание при наведении */
-  font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+  text-decoration: underline; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
-/* Добавляем стили к строкам таблицы */
+
 .pricing-table tbody tr {
-  background-color: #111; /* Цвет фона для строк */
-  transition: background-color 0.3s; /* Плавное изменение цвета фона */
+  background-color: #111; 
+  transition: background-color 0.3s; 
 }
 
-/* При наведении на строку изменяем цвет фона */
+
 .pricing-table tbody tr:hover {
   background-color: #333;
 }
@@ -151,16 +151,16 @@ hr.input-underline {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Черный цвет фона с небольшой прозрачностью */
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .modal-content {
-  background-color: black; /* Черный цвет фона внутри модального окна */
+  background-color: black; 
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  color: white; /* Белый цвет текста внутри модального окна */
+  color: white; 
 }
 
 .close {
@@ -176,8 +176,6 @@ hr.input-underline {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* main.css */
 
 body {
   font-family: Arial, sans-serif;
@@ -221,7 +219,7 @@ th {
   height: 20px;
 }
 
-/* Дополненные стили */
+
 #weightCalculationTable {
   width: 80%;
   margin: 20px auto;
@@ -232,7 +230,7 @@ th {
 #weightCalculationTable th, #weightCalculationTable td {
   padding: 10px;
   text-align: center;
-  border: 1px solid white; /* Добавлены границы для ячеек */
+  border: 1px solid white; 
 }
 
 #weightCalculationTable th {
@@ -251,7 +249,7 @@ th {
   font-size: 18px;
 }
 
-/* Дополненные стили для кнопки */
+
 #calculateWeightButton {
   display: block;
   margin: 20px auto;
@@ -270,7 +268,7 @@ th {
   box-shadow: 0 0 20px 5px rgba(255, 159, 0, 0.5);
 }
 
-/* Дополненные стили для ввода */
+
 #weightCalculationTable input[type="number"] {
   width: calc(100% - 10px);
   height: 40px;
@@ -292,14 +290,14 @@ th {
   margin: 0;
 }
 
-/* Дополненные стили для подчеркивания */
+
 #weightCalculationTable hr.input-underline {
   border: none;
   border-top: 1px solid white;
   margin: 0;
 }
 
-/* Дополненные стили для строк таблицы */
+
 #weightCalculationTable tbody tr {
   background-color: #111;
   transition: background-color 0.3s;
@@ -310,7 +308,7 @@ th {
 }
 
 
-/* Дополненные стили */
+
 #weightCalculationTable {
   width: 80%;
   margin: 20px auto;
@@ -321,7 +319,7 @@ th {
 #weightCalculationTable th, #weightCalculationTable td {
   padding: 10px;
   text-align: center;
-  border: 1px solid white; /* Добавлены границы для ячеек */
+  border: 1px solid white; 
 }
 
 #weightCalculationTable th {
@@ -340,7 +338,7 @@ th {
   font-size: 18px;
 }
 
-/* Дополненные стили для кнопки */
+
 #calculateWeightButton {
   display: block;
   margin: 20px auto;
@@ -359,7 +357,7 @@ th {
   box-shadow: 0 0 20px 5px rgba(255, 159, 0, 0.5);
 }
 
-/* Дополненные стили для ввода */
+
 #weightCalculationTable input[type="number"] {
   width: calc(100% - 10px);
   height: 40px;
@@ -381,14 +379,14 @@ th {
   margin: 0;
 }
 
-/* Дополненные стили для подчеркивания */
+
 #weightCalculationTable hr.input-underline {
   border: none;
   border-top: 1px solid white;
   margin: 0;
 }
 
-/* Дополненные стили для строк таблицы */
+
 #weightCalculationTable tbody tr {
   background-color: #111;
   transition: background-color 0.3s;
@@ -398,7 +396,7 @@ th {
   background-color: #333;
 }
 
-.hidden { display: none; /* Досвидания, невидимый мир! */ }
+.hidden { display: none;  }
 
 .img {
   position: absolute;
